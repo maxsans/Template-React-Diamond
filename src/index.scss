@@ -1,0 +1,139 @@
+:root {
+  --primary-50: #f3eef7;
+  --primary-100: #e0d1eb;
+  --primary-200: #caaedd;
+  --primary-300: #b28acf;
+  --primary-400: #9a6ec3;
+  --primary-500: #8961ab;
+  --primary-600: #764e95;
+  --primary-700: #5e3a78;
+  --primary-800: #472b5b;
+  --primary-900: #311d3f;
+
+  --navbarColor: 178, 138, 207;
+
+  --backgroundColor: var(--backgroundColor-dark);
+  --textColor: var(--textColor-dark);
+
+  --borderRadius-sm: 4px;
+  --borderRadius-md: 8px;
+  --borderRadius-lg: 16px;
+  --borderRadius-xl: 24px;
+
+  --backgroundColor-light: #ffffff;
+  --textColor-light: #000000;
+
+  --backgroundColor-dark: #000000;
+  --textColor-dark: #ffffff;
+
+  --codeBlockBackground-light: #f5f5f5;
+  --codeBlockBackground-dark: #2d2d2d;
+  --codeBlockText-light: #333;
+  --codeBlockText-dark: #f5f5f5;
+
+  --codeBlockComment-light: #6a737d;
+  --codeBlockComment-dark: #999999;
+  --codeBlockPunctuation-light: #999;
+  --codeBlockPunctuation-dark: #cccccc;
+  --codeBlockProperty-light: #c92c2c;
+  --codeBlockProperty-dark: #ff5555;
+  --codeBlockString-light: #032f62;
+  --codeBlockString-dark: #66d9ef;
+  --codeBlockOperator-light: #d73a49;
+  --codeBlockOperator-dark: #ff79c6;
+  --codeBlockKeyword-light: #d73a49;
+  --codeBlockKeyword-dark: #ff79c6;
+  --codeBlockFunction-light: #6f42c1;
+  --codeBlockFunction-dark: #50fa7b;
+  --codeBlockVariable-light: #005cc5;
+  --codeBlockVariable-dark: #bd93f9;
+}
+
+body.light-mode {
+  --backgroundColor: var(--backgroundColor-light);
+  --textColor: var(--textColor-light);
+  --titleColor: var(--primary-700);
+  --borderColorDiamond: var(--primary-700);
+  --textColorDiamond: var(--textColor-dark);
+  --backgroundColorDiamond: var(--backgroundColor-light);
+  --codeBlockColor: var(--primary-100);
+  --codeBlockBackground: var(--codeBlockBackground-light);
+  --codeBlockText: var(--codeBlockText-light);
+  --codeBlockComment: var(--codeBlockComment-light);
+  --codeBlockPunctuation: var(--codeBlockPunctuation-light);
+  --codeBlockProperty: var(--codeBlockProperty-light);
+  --codeBlockString: var(--codeBlockString-light);
+  --codeBlockOperator: var(--codeBlockOperator-light);
+  --codeBlockKeyword: var(--codeBlockKeyword-light);
+  --codeBlockFunction: var(--codeBlockFunction-light);
+  --codeBlockVariable: var(--codeBlockVariable-light);
+  background-color: var(--backgroundColor);
+}
+
+body.dark-mode {
+  --backgroundColor: var(--backgroundColor-dark);
+  --textColor: var(--textColor-dark);
+  --titleColor: var(--primary-300);
+  --borderColorDiamond: var(--primary-700);
+  --textColorDiamond: var(--textColor-dark);
+  --backgroundColorDiamond: var(--backgroundColor-dark);
+  --codeBlockColor: var(--primary-800);
+  --codeBlockBackground: var(--codeBlockBackground-dark);
+  --codeBlockText: var(--codeBlockText-dark);
+  --codeBlockComment: var(--codeBlockComment-dark);
+  --codeBlockPunctuation: var(--codeBlockPunctuation-dark);
+  --codeBlockProperty: var(--codeBlockProperty-dark);
+  --codeBlockString: var(--codeBlockString-dark);
+  --codeBlockOperator: var(--codeBlockOperator-dark);
+  --codeBlockKeyword: var(--codeBlockKeyword-dark);
+  --codeBlockFunction: var(--codeBlockFunction-dark);
+  --codeBlockVariable: var(--codeBlockVariable-dark);
+  background-color: var(--backgroundColor);
+}
+
+body {
+  overflow: auto;
+}
+
+/* Firefox */
+@supports (-moz-appearance: none) {
+  body {
+    scrollbar-width: none;
+  }
+}
+
+/* WebKit (Chrome, Safari) */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  body::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+// SCSS variables
+$mobileSize: 680px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", "";
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Best Wishes";
+  src: url("./assets/fonts/BestWishes.ttf") format("truetype");
+}
+
+.content {
+  padding: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}

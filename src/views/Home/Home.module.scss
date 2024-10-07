@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  gap: 6vh;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 80px 0 0 0;
+  margin: 2% 0;
+
+  // margin-bottom: 20vh;
+  .titleContainer {
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+    width: 100%;
+    .title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--titleColor);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .description {
+      font-size: 1.2rem;
+      color: var(--titleColor);
+      margin: 0 auto 2%;
+      text-align: center;
+    }
+  }
+
+  .component {
+    height: 100%;
+    width: 100%;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: space-around;
+
+    .exampleLandscape {
+      display: flex;
+      border-radius: var(--borderRadius-xl);
+      background-color: var(--backgroundColor);
+      box-shadow: 0 0 40px 40px rgba(var(--navbarColor), 0.2);
+      width: 60%;
+      height: 70vh;
+      position: relative;
+      overflow: auto;
+
+      /* Firefox */
+      @supports (-moz-appearance: none) {
+        & {
+          scrollbar-width: none;
+        }
+      }
+
+      /* WebKit (Chrome, Safari) */
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+      }
+    }
+    .descriptionContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 2vh;
+      width: 25%;
+      margin: auto 0;
+      .componentTitle {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--titleColor);
+        margin: 0 auto;
+      }
+      .componentDescription {
+        font-size: 1.2rem;
+        color: var(--titleColor);
+      }
+      .codeBlock {
+        background-color: var(--codeBlockBackground) !important;
+        padding: 1.2rem;
+        border-radius: var(--borderRadius-md);
+        overflow-x: auto;
+        font-size: 0.9rem;
+        color: var(--codeBlockText);
+        margin-top: 1rem;
+        width: 100%;
+      }
+    }
+  }
+  .component.active {
+    animation: slideIn 0.5s forwards;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    gap: 10vh;
+    .component {
+      flex-direction: column;
+      gap: 10vh;
+      align-items: center;
+
+      .exampleLandscape {
+        width: 90%;
+        height: 80vh;
+      }
+      .descriptionContainer {
+        width: 90%;
+        align-items: center;
+        .codeBlock {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
