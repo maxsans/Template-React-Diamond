@@ -1,6 +1,6 @@
 # Template React Diamond
 
-This project serves as an example of how to use the `react-diamond` library. The `react-diamond` library is available on npm and can be found [here](https://www.npmjs.com/package/react-diamond). The source code for the library is available on GitHub at [github.com/maxsans/react-diamond](https://github.com/maxsans/react-diamond).
+This project serves as an example of how to use the `react-diamond` library. The `react-diamond` library is available on npm and can be found [here](https://www.npmjs.com/package/react-diamond). The source code for the library is available on GitHub at [github.com/maxsans/react-diamond](https://github.com/maxsans/react-diamond). A demo of this code is available at [react-diamond.sinead.fr](https://react-diamond.sinead.fr).
 
 ## Installation
 
@@ -20,7 +20,6 @@ To start the development server, run:
 npm run dev
 ```
 
-
 ## Screenshots
 
 ![homeScreen](./img/homeScreen.png)
@@ -33,4 +32,3 @@ If you encounter any issues or have any questions, please feel free to open an i
 ## License
 
 This project is licensed under the MIT License.
-
