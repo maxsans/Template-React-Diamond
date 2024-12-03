@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/react-diamond.png";
 import { FaGithub, FaSun, FaMoon, FaExpand } from "react-icons/fa";
-import styles from "./navbar.module.scss";
+import styles from "./Navbar.module.scss";
 import { useLocation, useNavigate } from "react-router-dom";
 
 interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
